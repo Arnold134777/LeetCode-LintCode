@@ -130,10 +130,10 @@ Time Limit Exceeded
 
 当 mx - i > P[j] 的时候，以S[j]为中心的回文子串包含在以S[id]为中心的回文子串中，由于 i 和 j 对称，以S[i]为中心的回文子串必然包含在以S[id]为中心的回文子串中，所以必有 P[i] = P[j]，见下图。
 
-![](./1.png)
+![](https://github.com/Arnold134777/LeetCode-LintCode/raw/master/category/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%8CManacher%20%E7%AE%97%E6%B3%95/Longest%20Palindromic%20Substring/1.png)
 
 当 P[j] >= mx - i 的时候，以S[j]为中心的回文子串不一定完全包含于以S[id]为中心的回文子串中，但是基于对称性可知，下图中两个绿框所包围的部分是相同的，也就是说以S[i]为中心的回文子串，其向右至少会扩张到mx的位置，也就是说 P[i] >= mx - i。至于mx之后的部分是否对称，就只能老老实实去匹配了。
-![](./2.png)
+![](https://github.com/Arnold134777/LeetCode-LintCode/raw/master/category/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%8CManacher%20%E7%AE%97%E6%B3%95/Longest%20Palindromic%20Substring/2.png)
 
 得到的计算的方程式：
 
